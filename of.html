@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Información de Vuelos en Colombia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Información general sobre rutas aéreas nacionales en Colombia.">
+
+  <style>
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Arial;
+      background:#0f172a;
+      color:#0b1220;
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#2563eb,#38bdf8);
+      color:#fff;
+      padding:50px 20px;
+      text-align:center;
+    }
+
+    .container{
+      max-width:1100px;
+      margin:auto;
+      padding:24px;
+    }
+
+    h1{margin-bottom:10px}
+    p{font-size:14px;color:#e0e7ff}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+      gap:16px;
+      margin-top:30px;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 10px 25px rgba(0,0,0,.2);
+      text-align:center;
+    }
+
+    .route{
+      font-weight:700;
+      margin-bottom:10px;
+      color:#1e3a8a;
+    }
+
+    .btn{
+      background:#2563eb;
+      color:#fff;
+      border:none;
+      padding:12px 18px;
+      border-radius:12px;
+      font-weight:700;
+      cursor:pointer;
+      width:100%;
+    }
+
+    .btn:hover{opacity:.9}
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      padding:20px;
+      font-size:13px;
+      text-align:center;
+      margin-top:40px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="hero">
+  <h1>Información de vuelos nacionales</h1>
+  <p>Rutas aéreas disponibles dentro de Colombia</p>
+</header>
+
+<main class="container">
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="route">Bogotá – Medellín</div>
+      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+    </div>
+
+    <div class="card">
+      <div class="route">Bogotá – Cartagena</div>
+      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+    </div>
+
+    <div class="card">
+      <div class="route">Bogotá – Cali</div>
+      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+    </div>
+
+    <div class="card">
+      <div class="route">Bogotá – Barranquilla</div>
+      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+    </div>
+
+    <div class="card">
+      <div class="route">Bogotá – Santa Marta</div>
+      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+    </div>
+
+    <div class="card">
+      <div class="route">Medellín – Cartagena</div>
+      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+    </div>
+
+    <div class="card">
+      <div class="route">Cali – San Andrés</div>
+      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+    </div>
+
+  </div>
+
+  <p style="margin-top:30px;font-size:13px;color:#64748b;text-align:center">
+    Este sitio es informativo. No se realizan reservas ni ventas directas.
+  </p>
+
+</main>
+
+<footer>
+  © 2025 Información de Vuelos Colombia — Sitio informativo
+</footer>
+
+</body>
+</html>
