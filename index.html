@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ofertas de Vuelos 2025</title>
+  <meta name="description" content="Consulta y compara ofertas de vuelos nacionales en Colombia. Tarifas sujetas a disponibilidad.">
+  <style>
+    :root{--primary:#2563eb;--secondary:#06b6d4;--dark:#0f172a;--muted:#64748b}
+    *{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    body{margin:0;background:#f8fafc;color:#0b1220}
+    a{text-decoration:none;color:inherit}
+    .hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
+    .container{max-width:1200px;margin:auto;padding:24px}
+    header .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:46px;height:46px;border-radius:12px;background:#fff;color:var(--primary);display:grid;place-items:center;font-weight:900}
+    h1{font-size:36px;margin:20px 0 10px;line-height:1.1}
+    .muted{color:var(--muted);font-size:14px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+    .card{background:#fff;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.15);padding:16px}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
+    .input,select,button{padding:10px;border-radius:10px;border:1px solid #cbd5f5}
+    button{background:var(--primary);color:#fff;font-weight:700;border:none;cursor:pointer}
+    button:hover{opacity:.9}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+    .dest{position:relative;border-radius:16px;overflow:hidden}
+    .dest img{width:100%;height:240px;object-fit:cover}
+    .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.2));color:#fff;padding:14px;display:flex;flex-direction:column;justify-content:end}
+    footer{background:#020617;color:#cbd5e1;padding:24px;font-size:13px}
+    footer a{text-decoration:underline}
+    @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div class="brand">
+      <div class="logo">✈️</div>
+      <div>
+        <strong>Ofertas de Vuelos 2025</strong>
+        <div class="muted" style="color:#e0e7ff">Promociones aéreas sujetas a disponibilidad</div>
+      </div>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1>Encuentra y compara <br>ofertas de vuelos en Colombia</h1>
+        <p class="muted" style="color:#e0e7ff">Consulta tarifas promocionales para viajes nacionales. Los precios pueden variar según fecha, ruta y disponibilidad.</p>
+      </div>
+
+      <div class="card" aria-label="Formulario de búsqueda">
+        <div class="field">
+          <label>Origen</label>
+          <select class="input"><option>Seleccione origen</option></select>
+        </div>
+        <div class="field">
+          <label>Destino</label>
+          <select class="input"><option>Seleccione destino</option></select>
+        </div>
+        <div class="field">
+          <label>Fecha de ida</label>
+          <input type="date" class="input" required>
+        </div>
+        <div class="field">
+          <label>Pasajeros</label>
+          <select class="input"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+        </div>
+        <button>Buscar vuelos</button>
+        <p class="muted" style="margin-top:8px">* Tarifas referenciales, no garantizadas.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <h2>Destinos populares</h2>
+  <div class="grid">
+    <div class="dest"><img src="img/cartagena.webp"><div class="overlay"><strong>Cartagena</strong><span>Desde $147.000 COP*</span></div></div>
+    <div class="dest"><img src="img/bogota.webp"><div class="overlay"><strong>Bogotá</strong><span>Desde $147.000 COP*</span></div></div>
+    <div class="dest"><img src="img/medellin.jpg"><div class="overlay"><strong>Medellín</strong><span>Desde $147.000 COP*</span></div></div>
+    <div class="dest"><img src="img/cali.webp"><div class="overlay"><strong>Cali</strong><span>Desde $147.000 COP*</span></div></div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <strong>Términos y Condiciones</strong>
+    <p>Las tarifas mostradas son valores referenciales por trayecto, expresados en pesos colombianos (COP), sujetos a disponibilidad, cambios sin previo aviso y condiciones del proveedor aéreo. Los precios pueden variar según fechas, rutas, cupos, impuestos, tasas aeroportuarias y cargos administrativos.</p>
+    <p>Este sitio no representa a ninguna aerolínea de forma oficial. La información presentada tiene fines informativos y comerciales. Al realizar una búsqueda o solicitud, el usuario acepta que los resultados pueden redirigir a terceros.</p>
+    <p>No se garantiza disponibilidad ni precio final hasta el momento de la confirmación con el proveedor correspondiente.</p>
+    <p>Al continuar, el usuario acepta estos términos y nuestra política de uso.</p>
+    <p style="margin-top:16px">© 2025 Ofertas de Vuelos 2025 — Todos los derechos reservados</p>
+  </div>
+</footer>
+
+</body>
+</html>
