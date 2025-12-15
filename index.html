@@ -4,79 +4,182 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ofertas de Vuelos 2025</title>
-  <meta name="description" content="Consulta y compara ofertas de vuelos nacionales en Colombia. Tarifas sujetas a disponibilidad.">
+  <meta name="description" content="Consulta promociones de vuelos nacionales en Colombia. Sujeto a disponibilidad.">
+
   <style>
-    :root{--primary:#2563eb;--secondary:#06b6d4;--dark:#0f172a;--muted:#64748b}
-    *{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
-    body{margin:0;background:#f8fafc;color:#0b1220}
+    :root{
+      --primary:#2563eb;
+      --secondary:#38bdf8;
+      --muted:#64748b;
+    }
+
+    *{
+      box-sizing:border-box;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial
+    }
+
+    body{
+      margin:0;
+      background:#0f172a;
+      color:#0b1220;
+    }
+
     a{text-decoration:none;color:inherit}
-    .hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}
-    .container{max-width:1200px;margin:auto;padding:24px}
-    header .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:46px;height:46px;border-radius:12px;background:#fff;color:var(--primary);display:grid;place-items:center;font-weight:900}
-    h1{font-size:36px;margin:20px 0 10px;line-height:1.1}
-    .muted{color:var(--muted);font-size:14px}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
-    .card{background:#fff;border-radius:16px;box-shadow:0 10px 28px rgba(0,0,0,.15);padding:16px}
-    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:10px}
-    .input,select,button{padding:10px;border-radius:10px;border:1px solid #cbd5f5}
-    button{background:var(--primary);color:#fff;font-weight:800;border:none;cursor:pointer;font-size:20px;padding:18px 28px;border-radius:14px;width:100%}
+
+    /* HERO CON CIELO + AVIÓN */
+    .hero{
+      background:
+        linear-gradient(rgba(30,64,175,.75), rgba(37,99,235,.85)),
+        url('img/cielo-avion.jpg') no-repeat center center;
+      background-size:cover;
+      color:#fff;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:24px;
+      width:100%;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-bottom:40px;
+    }
+
+    .logo{
+      width:46px;
+      height:46px;
+      border-radius:12px;
+      background:#fff;
+      color:var(--primary);
+      display:grid;
+      place-items:center;
+      font-weight:900;
+    }
+
+    h1{
+      font-size:38px;
+      line-height:1.1;
+      margin:0 0 10px;
+    }
+
+    .muted{
+      font-size:14px;
+      color:#e0e7ff;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:32px;
+      align-items:center;
+    }
+
+    .card{
+      background:#fff;
+      border-radius:18px;
+      box-shadow:0 20px 40px rgba(0,0,0,.25);
+      padding:28px;
+      text-align:center;
+    }
+
+    .cta-title{
+      font-size:26px;
+      font-weight:800;
+      margin-bottom:20px;
+      color:#1e3a8a;
+    }
+
+    button{
+      background:var(--primary);
+      color:#fff;
+      font-weight:800;
+      border:none;
+      cursor:pointer;
+      font-size:22px;
+      padding:20px 30px;
+      border-radius:16px;
+      width:100%;
+    }
+
     button:hover{opacity:.9}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
-    .dest{position:relative;border-radius:16px;overflow:hidden}
-    .dest img{width:100%;height:240px;object-fit:cover}
-    .overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.2));color:#fff;padding:14px;display:flex;flex-direction:column;justify-content:end}
-    footer{background:#020617;color:#cbd5e1;padding:24px;font-size:13px}
+
+    footer{
+      background:#020617;
+      color:#cbd5e1;
+      padding:20px;
+      font-size:13px;
+      text-align:center;
+    }
+
     footer a{text-decoration:underline}
-    @media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+
+    @media(max-width:900px){
+      .hero-grid{grid-template-columns:1fr}
+      h1{font-size:30px}
+    }
   </style>
 </head>
+
 <body>
 
 <header class="hero">
   <div class="container">
+
     <div class="brand">
       <div class="logo">✈️</div>
       <div>
         <strong>Ofertas de Vuelos 2025</strong>
-        <div class="muted" style="color:#e0e7ff">Promociones aéreas sujetas a disponibilidad</div>
+        <div class="muted">Promociones aéreas sujetas a disponibilidad</div>
       </div>
     </div>
 
     <div class="hero-grid">
       <div>
-        <h1>Encuentra y compara <br>ofertas de vuelos en Colombia</h1>
-        <p class="muted" style="color:#e0e7ff">Consulta tarifas promocionales para viajes nacionales. Los precios pueden variar según fecha, ruta y disponibilidad.</p>
+        <h1>Encuentra ofertas<br>de vuelos en Colombia</h1>
+        <p class="muted">
+          Información promocional. Las condiciones finales dependen del proveedor.
+        </p>
       </div>
 
       <div class="card" aria-label="Acceso a ofertas">
-        <p style="font-weight:600;margin-bottom:12px">Consulta las ofertas de vuelos disponibles</p>
-        <a href="formulario.html"><button>Ver ofertas disponibles</button></a>
-        <p class="muted" style="margin-top:8px">* Las ofertas mostradas son referenciales y están sujetas a disponibilidad y condiciones del proveedor.</p>
+        <div class="cta-title">Ofertas de Vuelos 2025</div>
+        <a href="formulario.html">
+          <button>Ver ofertas disponibles</button>
+        </a>
+        <p class="muted" style="margin-top:12px;color:#64748b">
+          * Información referencial. Sujeto a disponibilidad.
+        </p>
       </div>
     </div>
+
   </div>
 </header>
 
-<main class="container">
-  
-</main>
-
 <footer>
-  <div class="container">
-    <a href="#" onclick="document.getElementById('tc').style.display='block'">Términos y Condiciones</a>
-    <p style="margin-top:16px">© 2025 Ofertas de Vuelos 2025 — Todos los derechos reservados</p>
-  </div>
+  <a href="#" onclick="document.getElementById('tc').style.display='block'">
+    Términos y Condiciones
+  </a>
+  <p style="margin-top:12px">
+    © 2025 Ofertas de Vuelos 2025 — Todos los derechos reservados
+  </p>
 </footer>
 
-<div id="tc" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);padding:20px;overflow:auto">
-  <div style="background:#fff;max-width:800px;margin:40px auto;padding:20px;border-radius:14px">
+<div id="tc" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);padding:20px">
+  <div style="background:#fff;max-width:800px;margin:40px auto;padding:24px;border-radius:16px">
     <h3>Términos y Condiciones</h3>
-    <p>Las promociones y contenidos mostrados en este sitio son de carácter informativo. No se garantizan precios, disponibilidad ni condiciones finales hasta la confirmación con el proveedor correspondiente.</p>
-    <p>Este sitio no representa ni actúa en nombre de aerolíneas u operadores turísticos. Las imágenes utilizadas son ilustrativas.</p>
-    <p>El usuario acepta que al continuar puede ser redirigido a plataformas de terceros.</p>
-    <p>Las condiciones pueden cambiar sin previo aviso.</p>
-    <button onclick="document.getElementById('tc').style.display='none'">Cerrar</button>
+    <p>Este sitio ofrece información promocional de carácter referencial. No se garantizan precios ni disponibilidad.</p>
+    <p>No representamos aerolíneas. Las imágenes son ilustrativas.</p>
+    <p>El usuario puede ser redirigido a plataformas de terceros.</p>
+    <button onclick="document.getElementById('tc').style.display='none'" style="margin-top:10px">
+      Cerrar
+    </button>
   </div>
 </div>
 
