@@ -26,7 +26,6 @@
 
     a{text-decoration:none;color:inherit}
 
-    /* HERO CON CIELO + AVIÓN */
     .hero{
       background:
         linear-gradient(rgba(30,64,175,.75), rgba(37,99,235,.85)),
@@ -40,7 +39,6 @@
       max-width:1200px;
       margin:auto;
       padding:24px;
-      width:100%;
     }
 
     .brand{
@@ -62,7 +60,7 @@
     }
 
     h1{
-      font-size:36px;
+      font-size:34px;
       line-height:1.1;
       margin:0 0 10px;
     }
@@ -116,7 +114,7 @@
       text-align:center;
     }
 
-    footer a{text-decoration:underline}
+    footer a{text-decoration:underline;cursor:pointer}
 
     @media(max-width:900px){
       .hero-grid{grid-template-columns:1fr}
@@ -146,7 +144,7 @@
         </p>
       </div>
 
-      <div class="card" aria-label="Consulta de información">
+      <div class="card">
         <div class="cta-title">Información de Vuelos 2025</div>
 
         <a href="of.html">
@@ -156,10 +154,6 @@
         <p class="muted" style="margin-top:12px;color:#64748b">
           Sitio informativo. No se realizan ventas ni cotizaciones directas.
         </p>
-
-        <p class="muted" style="margin-top:8px;color:#64748b">
-          Este sitio no ofrece productos financieros, créditos, préstamos ni seguros.
-        </p>
       </div>
     </div>
 
@@ -167,20 +161,29 @@
 </header>
 
 <footer>
-  <a href="#" onclick="document.getElementById('tc').style.display='block'">
+  <span onclick="document.getElementById('tc').style.display='block'">
     Términos y Condiciones
-  </a>
+  </span>
   <p style="margin-top:12px">
     © 2025 Información de Vuelos 2025 — Todos los derechos reservados
   </p>
 </footer>
 
+<!-- POPUP TÉRMINOS -->
 <div id="tc" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);padding:20px">
   <div style="background:#fff;max-width:800px;margin:40px auto;padding:24px;border-radius:16px">
     <h3>Términos y Condiciones</h3>
-    <p>Este sitio es de carácter informativo y no realiza ventas, cotizaciones ni reservas directas.</p>
-    <p>No representamos aerolíneas ni proveedores de servicios financieros.</p>
-    <p>Las imágenes utilizadas son ilustrativas.</p>
+
+    <p>Este sitio es de carácter informativo.</p>
+    <p>No se realizan ventas, reservas ni cotizaciones.</p>
+    <p>No representamos aerolíneas ni agencias de viaje.</p>
+
+    <p><strong>
+      Este sitio no ofrece productos financieros, créditos, préstamos ni seguros.
+    </strong></p>
+
+    <p>El contenido puede cambiar sin previo aviso.</p>
+
     <button onclick="document.getElementById('tc').style.display='none'" style="margin-top:10px">
       Cerrar
     </button>
