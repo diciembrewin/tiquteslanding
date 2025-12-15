@@ -1,78 +1,113 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Información de Vuelos en Colombia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Información general sobre rutas aéreas nacionales en Colombia.">
+<meta charset="utf-8">
+<title>Información de Vuelos en Colombia</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Información general sobre rutas aéreas nacionales en Colombia.">
 
-  <style>
-    body{
-      margin:0;
-      font-family:Inter,system-ui,Arial;
-      background:#0f172a;
-      color:#0b1220;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Inter,system-ui,Arial;
+  background:#0f172a;
+  color:#0b1220;
+}
 
-    .hero{
-      background:linear-gradient(135deg,#2563eb,#38bdf8);
-      color:#fff;
-      padding:50px 20px;
-      text-align:center;
-    }
+.hero{
+  background:linear-gradient(135deg,#2563eb,#38bdf8);
+  color:#fff;
+  padding:50px 20px;
+  text-align:center;
+}
 
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:24px;
-    }
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:24px;
+}
 
-    h1{margin-bottom:10px}
-    p{font-size:14px;color:#e0e7ff}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:16px;
+  margin-top:30px;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
-      gap:16px;
-      margin-top:30px;
-    }
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  text-align:center;
+}
 
-    .card{
-      background:#fff;
-      border-radius:16px;
-      padding:18px;
-      box-shadow:0 10px 25px rgba(0,0,0,.2);
-      text-align:center;
-    }
+.route{
+  font-weight:700;
+  margin-bottom:12px;
+  color:#1e3a8a;
+}
 
-    .route{
-      font-weight:700;
-      margin-bottom:10px;
-      color:#1e3a8a;
-    }
+.btn{
+  background:#2563eb;
+  color:#fff;
+  border:none;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:700;
+  cursor:pointer;
+  width:100%;
+}
 
-    .btn{
-      background:#2563eb;
-      color:#fff;
-      border:none;
-      padding:12px 18px;
-      border-radius:12px;
-      font-weight:700;
-      cursor:pointer;
-      width:100%;
-    }
+.btn:hover{opacity:.9}
 
-    .btn:hover{opacity:.9}
+footer{
+  background:#020617;
+  color:#cbd5e1;
+  padding:20px;
+  font-size:13px;
+  text-align:center;
+  margin-top:40px;
+}
 
-    footer{
-      background:#020617;
-      color:#cbd5e1;
-      padding:20px;
-      font-size:13px;
-      text-align:center;
-      margin-top:40px;
-    }
-  </style>
+footer a{text-decoration:underline;cursor:pointer}
+
+/* POPUP GENERAL */
+.popup{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.7);
+  z-index:999;
+  padding:20px;
+}
+
+.popup-content{
+  background:#fff;
+  max-width:500px;
+  margin:60px auto;
+  padding:24px;
+  border-radius:16px;
+}
+
+.popup h3{margin-top:0}
+
+input,button{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:10px;
+  border:1px solid #cbd5e1;
+}
+
+.popup button{
+  background:#2563eb;
+  color:#fff;
+  font-weight:700;
+  border:none;
+  cursor:pointer;
+}
+</style>
 </head>
 
 <body>
@@ -88,50 +123,89 @@
 
     <div class="card">
       <div class="route">Bogotá – Medellín</div>
-      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+      <button class="btn" onclick="openForm()">Consultar información</button>
     </div>
 
     <div class="card">
       <div class="route">Bogotá – Cartagena</div>
-      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+      <button class="btn" onclick="openForm()">Consultar información</button>
     </div>
 
     <div class="card">
       <div class="route">Bogotá – Cali</div>
-      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+      <button class="btn" onclick="openForm()">Consultar información</button>
     </div>
 
     <div class="card">
       <div class="route">Bogotá – Barranquilla</div>
-      <a href="formulario.html"><button class="btn">Consultar información</button></a>
-    </div>
-
-    <div class="card">
-      <div class="route">Bogotá – Santa Marta</div>
-      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+      <button class="btn" onclick="openForm()">Consultar información</button>
     </div>
 
     <div class="card">
       <div class="route">Medellín – Cartagena</div>
-      <a href="formulario.html"><button class="btn">Consultar información</button></a>
-    </div>
-
-    <div class="card">
-      <div class="route">Cali – San Andrés</div>
-      <a href="formulario.html"><button class="btn">Consultar información</button></a>
+      <button class="btn" onclick="openForm()">Consultar información</button>
     </div>
 
   </div>
 
   <p style="margin-top:30px;font-size:13px;color:#64748b;text-align:center">
-    Este sitio es informativo. No se realizan reservas ni ventas directas.
+    Sitio informativo. No se realizan reservas, pagos ni ventas directas.
   </p>
 
 </main>
 
 <footer>
-  © 2025 Información de Vuelos Colombia — Sitio informativo
+  <span onclick="openTC()">Términos y Condiciones</span><br>
+  © 2025 Información de Vuelos Colombia
 </footer>
+
+<!-- POPUP FORMULARIO -->
+<div id="formPopup" class="popup">
+  <div class="popup-content">
+    <h3>Consulta de información</h3>
+    <p style="font-size:13px;color:#64748b">
+      Completa el formulario para recibir información general.
+    </p>
+
+    <input type="text" placeholder="Nombre completo" required>
+    <input type="email" placeholder="Correo electrónico" required>
+    <input type="tel" placeholder="WhatsApp / Teléfono">
+
+    <button>Enviar consulta</button>
+
+    <p style="font-size:12px;color:#64748b;margin-top:10px">
+      Este sitio no ofrece productos financieros, créditos, préstamos ni seguros.
+    </p>
+
+    <button onclick="closeForm()" style="margin-top:10px;background:#e5e7eb;color:#000">
+      Cerrar
+    </button>
+  </div>
+</div>
+
+<!-- POPUP TÉRMINOS -->
+<div id="tcPopup" class="popup">
+  <div class="popup-content">
+    <h3>Términos y Condiciones</h3>
+
+    <p>Este sitio es de carácter informativo.</p>
+    <p>No se realizan ventas, reservas ni cotizaciones.</p>
+    <p>No representamos aerolíneas ni agencias de viaje.</p>
+
+    <p><strong>Este sitio no ofrece productos financieros, créditos, préstamos ni seguros.</strong></p>
+
+    <p>El usuario acepta que la información puede variar sin previo aviso.</p>
+
+    <button onclick="closeTC()">Cerrar</button>
+  </div>
+</div>
+
+<script>
+function openForm(){document.getElementById('formPopup').style.display='block'}
+function closeForm(){document.getElementById('formPopup').style.display='none'}
+function openTC(){document.getElementById('tcPopup').style.display='block'}
+function closeTC(){document.getElementById('tcPopup').style.display='none'}
+</script>
 
 </body>
 </html>
