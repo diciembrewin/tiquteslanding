@@ -1,38 +1,41 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Información de Vuelos 2025</title>
-  <meta name="description" content="Sitio informativo sobre opciones de vuelos nacionales en Colombia.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Información de Vuelos en Colombia 2026</title>
+
+  <meta name="description" content="Portal informativo sobre rutas y opciones generales de vuelos nacionales en Colombia. Sitio editorial sin ventas ni reservas.">
+
+  <meta name="robots" content="index,follow">
 
   <style>
     :root{
       --primary:#2563eb;
-      --secondary:#38bdf8;
+      --secondary:#0ea5e9;
+      --dark:#020617;
+      --text:#0f172a;
       --muted:#64748b;
+      --bg:#f8fafc;
     }
 
     *{
       box-sizing:border-box;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
     }
 
     body{
       margin:0;
-      background:#0f172a;
-      color:#0b1220;
+      background:var(--bg);
+      color:var(--text);
     }
 
-    a{text-decoration:none;color:inherit}
+    a{color:inherit;text-decoration:none}
 
     .hero{
-      background:
-        linear-gradient(rgba(30,64,175,.75), rgba(37,99,235,.85)),
-        url('img/cielo-avion.jpg') no-repeat center center;
-      background-size:cover;
+      background:linear-gradient(135deg,#1e3a8a,#2563eb);
       color:#fff;
-      padding:80px 0 60px;
+      padding:80px 0 64px;
     }
 
     .container{
@@ -43,34 +46,36 @@
 
     .brand{
       display:flex;
-      gap:12px;
       align-items:center;
+      gap:14px;
       margin-bottom:40px;
     }
 
     .logo{
-      width:46px;
-      height:46px;
-      border-radius:12px;
+      width:48px;
+      height:48px;
       background:#fff;
       color:var(--primary);
+      border-radius:14px;
       display:grid;
       place-items:center;
       font-weight:900;
+      font-size:20px;
     }
 
     h1{
-      font-size:34px;
-      line-height:1.1;
-      margin:0 0 10px;
+      font-size:36px;
+      line-height:1.15;
+      margin:0 0 14px;
     }
 
-    .muted{
-      font-size:14px;
-      color:#e0e7ff;
+    .subtitle{
+      color:#dbeafe;
+      font-size:15px;
+      max-width:520px;
     }
 
-    .hero-grid{
+    .grid{
       display:grid;
       grid-template-columns:1.1fr .9fr;
       gap:32px;
@@ -79,51 +84,59 @@
 
     .card{
       background:#fff;
-      border-radius:18px;
-      box-shadow:0 20px 40px rgba(0,0,0,.25);
-      padding:28px;
+      border-radius:20px;
+      padding:32px;
+      box-shadow:0 20px 40px rgba(0,0,0,.15);
       text-align:center;
     }
 
-    .cta-title{
+    .card h2{
       font-size:24px;
-      font-weight:800;
-      margin-bottom:18px;
+      margin-bottom:16px;
       color:#1e3a8a;
     }
 
-    button{
+    .card p{
+      font-size:14px;
+      color:var(--muted);
+      margin-bottom:22px;
+    }
+
+    .btn{
+      display:inline-block;
+      width:100%;
+      padding:18px;
+      border-radius:16px;
+      font-size:18px;
+      font-weight:800;
       background:var(--primary);
       color:#fff;
-      font-weight:800;
       border:none;
       cursor:pointer;
-      font-size:20px;
-      padding:18px 26px;
-      border-radius:16px;
-      width:100%;
     }
 
-    button:hover{opacity:.9}
+    .btn:hover{opacity:.9}
 
     footer{
-      background:#020617;
+      background:var(--dark);
       color:#cbd5e1;
-      padding:20px;
-      font-size:13px;
+      padding:28px 16px;
       text-align:center;
+      font-size:13px;
     }
 
-    footer span{
+    footer a{
       text-decoration:underline;
       cursor:pointer;
     }
 
     @media(max-width:900px){
-      .hero-grid{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
       h1{font-size:28px}
     }
   </style>
+
+  
 </head>
 
 <body>
@@ -134,27 +147,28 @@
     <div class="brand">
       <div class="logo">✈️</div>
       <div>
-        <strong>Información de Vuelos 2025</strong>
-        <div class="muted">Contenido informativo sobre vuelos en Colombia</div>
+        <strong>Información de Vuelos 2026</strong>
+        <div class="subtitle">Portal editorial sobre vuelos nacionales en Colombia</div>
       </div>
     </div>
 
-    <div class="hero-grid">
+    <div class="grid">
       <div>
-        <h1>Consulta información<br>de vuelos en Colombia</h1>
-        <p class="muted">
-          Este sitio proporciona información general sobre opciones de viaje aéreo.
+        <h1>Información general sobre<br>vuelos en Colombia</h1>
+        <p class="subtitle">
+          Contenido informativo y educativo sobre rutas aéreas, aeropuertos y conectividad nacional.
         </p>
       </div>
 
       <div class="card">
-        <div class="cta-title">Información de Vuelos 2025</div>
+        <h2>Explorar información aérea</h2>
+        <p>
+          Consulta datos generales sobre vuelos sin realizar reservas, pagos ni solicitudes.
+        </p>
 
-        <a href="of.html">
-          <button>🥈 Descubrir rutas aéreas</button>
+        <a href="of.html" class="btn">
+          Ver información disponible
         </a>
-
-       
       </div>
     </div>
 
@@ -162,36 +176,38 @@
 </header>
 
 <footer>
-  <span onclick="document.getElementById('tc').style.display='block'">
-    Términos y Condiciones
-  </span>
+  <a onclick="document.getElementById('tc').style.display='block'">
+    Aviso legal y términos
+  </a>
   <p style="margin-top:12px">
-    © 2025 Información de Vuelos 2025 — Todos los derechos reservados
+    © 2026 Información de Vuelos — Sitio informativo
   </p>
 </footer>
 
-<!-- POPUP TÉRMINOS Y CONDICIONES -->
+<!-- TÉRMINOS -->
 <div id="tc" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);padding:20px">
-  <div style="background:#fff;max-width:800px;margin:40px auto;padding:24px;border-radius:16px">
-    <h3>Términos y Condiciones</h3>
+  <div style="background:#fff;max-width:820px;margin:40px auto;padding:28px;border-radius:18px">
+    <h3>Aviso Legal</h3>
 
-    <p>Este sitio es de carácter informativo.</p>
+    <p><strong>Sitio de carácter informativo.</strong></p>
 
-    <p><strong>
-      Sitio informativo. No se realizan ventas ni cotizaciones directas.
-    </strong></p>
+    <p>
+      Este portal no ofrece servicios comerciales, financieros ni de intermediación.
+    </p>
 
-    <p>No se realizan reservas ni pagos a través de este sitio.</p>
+    <p>
+      No se realizan reservas, pagos, cotizaciones ni solicitudes de ningún tipo.
+    </p>
 
-    <p><strong>
-      Este sitio no ofrece productos financieros, créditos, préstamos ni seguros.
-    </strong></p>
+    <p>
+      No representamos aerolíneas, agencias de viaje ni plataformas externas.
+    </p>
 
-    <p>No representamos aerolíneas, agencias de viaje ni proveedores externos.</p>
+    <p>
+      El contenido tiene fines exclusivamente informativos y editoriales.
+    </p>
 
-    <p>El contenido puede cambiar sin previo aviso.</p>
-
-    <button onclick="document.getElementById('tc').style.display='none'" style="margin-top:10px">
+    <button class="btn" style="margin-top:14px" onclick="document.getElementById('tc').style.display='none'">
       Cerrar
     </button>
   </div>
