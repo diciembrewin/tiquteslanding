@@ -1,218 +1,183 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Información de Vuelos en Colombia 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="Portal informativo sobre rutas y opciones generales de vuelos nacionales en Colombia. Sitio editorial sin ventas ni reservas.">
+  <title>VuelaHoy | Información y Asistencia en Viajes</title>
 
-  <meta name="robots" content="index,follow">
+  <meta name="description" content="VuelaHoy brinda información y asistencia para vuelos y opciones de viaje. Contacta con asesores humanos para recibir orientación personalizada.">
+  <meta name="robots" content="index, follow">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --primary:#2563eb;
-      --secondary:#0ea5e9;
-      --dark:#020617;
-      --text:#0f172a;
-      --muted:#64748b;
-      --bg:#f8fafc;
-    }
-
-    *{
-      box-sizing:border-box;
-      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-    }
-
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-    }
-
-    a{color:inherit;text-decoration:none}
-
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;background:#070b18;color:#fff;line-height:1.6}
+    header{position:fixed;top:0;width:100%;background:rgba(0,0,0,.85);padding:1rem;text-align:center;z-index:100}
+    section{padding:5rem 1.5rem;text-align:center}
     .hero{
-      background:linear-gradient(135deg,#1e3a8a,#2563eb);
-      color:#fff;
-      padding:80px 0 64px;
+      min-height:100vh;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.85)),
+      url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b')
+      center/cover no-repeat;
     }
-
-    .container{
-      max-width:1200px;
-      margin:auto;
-      padding:24px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      margin-bottom:40px;
-    }
-
-    .logo{
-      width:48px;
-      height:48px;
-      background:#fff;
-      color:var(--primary);
-      border-radius:14px;
-      display:grid;
-      place-items:center;
-      font-weight:900;
-      font-size:20px;
-    }
-
-    h1{
-      font-size:36px;
-      line-height:1.15;
-      margin:0 0 14px;
-    }
-
-    .subtitle{
-      color:#dbeafe;
-      font-size:15px;
-      max-width:520px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:1.1fr .9fr;
-      gap:32px;
-      align-items:center;
-    }
-
+    h1{font-size:1.2rem;font-weight:800}
+    h2{font-size:2.1rem;margin-bottom:1rem}
+    h3{margin-bottom:.6rem}
+    p{max-width:900px;margin:0 auto 1.2rem;color:#e6e6e6}
+    .btn{display:inline-block;padding:.85rem 1.2rem;border-radius:999px;font-weight:700;margin:.3rem}
+    .btn-primary{background:#49f2ff;color:#000}
+    .btn-outline{border:2px solid #fff;color:#fff}
+    .cards{max-width:1000px;margin:auto;display:grid;gap:1rem}
     .card{
-      background:#fff;
-      border-radius:20px;
-      padding:32px;
-      box-shadow:0 20px 40px rgba(0,0,0,.15);
-      text-align:center;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.15);
+      border-radius:1rem;
+      padding:1.5rem;
     }
-
-    .card h2{
-      font-size:24px;
-      margin-bottom:16px;
-      color:#1e3a8a;
+    form{max-width:600px;margin:auto;display:grid;gap:.8rem;text-align:left}
+    input,textarea{
+      padding:.8rem;border-radius:.6rem;border:1px solid rgba(255,255,255,.2);
+      background:rgba(255,255,255,.08);color:#fff
     }
-
-    .card p{
-      font-size:14px;
-      color:var(--muted);
-      margin-bottom:22px;
-    }
-
-    .btn{
-      display:inline-block;
-      width:100%;
-      padding:18px;
-      border-radius:16px;
-      font-size:18px;
-      font-weight:800;
-      background:var(--primary);
-      color:#fff;
-      border:none;
-      cursor:pointer;
-    }
-
-    .btn:hover{opacity:.9}
-
     footer{
-      background:var(--dark);
-      color:#cbd5e1;
-      padding:28px 16px;
-      text-align:center;
-      font-size:13px;
+      background:#000;padding:2rem 1.5rem;color:#aaa;
+      font-size:.85rem;text-align:center
     }
-
-    footer a{
-      text-decoration:underline;
-      cursor:pointer;
+    footer a{color:#aaa}
+    footer a:hover{color:#fff}
+    .legal{
+      text-align:left;
+      max-width:1000px;
+      margin:0 auto;
+      font-size:.9rem;
+      color:#ddd;
     }
-
-    @media(max-width:900px){
-      .grid{grid-template-columns:1fr}
-      h1{font-size:28px}
+    .legal p{margin-bottom:1rem}
+    @media(min-width:768px){
+      .cards{grid-template-columns:repeat(3,1fr)}
     }
   </style>
-<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17894562389"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17894562389'); </script>
-
+  <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17914106470"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17914106470'); </script>
   
+  <!-- Event snippet for Compra (1) conversion page --> <script> gtag('event', 'conversion', { 'send_to': 'AW-17914106470/fZb8CMvU5e4bEOakjt5C', 'transaction_id': '' }); </script>
 </head>
 
 <body>
 
-<header class="hero">
-  <div class="container">
-
-    <div class="brand">
-      <div class="logo">✈️</div>
-      <div>
-        <strong>Información de Vuelos 2026</strong>
-        <div class="subtitle">Portal editorial sobre vuelos nacionales en Colombia</div>
-      </div>
-    </div>
-
-    <div class="grid">
-      <div>
-        <h1>Información general sobre<br>vuelos en Colombia</h1>
-        <p class="subtitle">
-          Contenido informativo y educativo sobre rutas aéreas, aeropuertos y conectividad nacional.
-        </p>
-      </div>
-
-      <div class="card">
-        <h2>Explorar información aérea</h2>
-        <p>
-          Consulta datos generales sobre vuelos sin realizar reservas, pagos ni solicitudes.
-        </p>
-
-        <a href="of.html" class="btn">
-          Ver información disponible
-        </a>
-      </div>
-    </div>
-
-  </div>
+<header>
+  <h1>✈️ VuelaHoy</h1>
 </header>
 
+<section class="hero">
+  <div>
+    <h2>Información y asistencia para viajes</h2>
+    <p>
+      VuelaHoy brinda orientación sobre vuelos y opciones de viaje.
+      Un asesor humano te contactará para ayudarte según tus fechas y destino.
+    </p>
+    <a href="#contacto" class="btn btn-primary">Solicitar información</a>
+    <a href="#terminos" class="btn btn-outline">Términos y condiciones</a>
+  </div>
+</section>
+
+<section id="opciones">
+  <h2>Rutas consultadas frecuentemente</h2>
+  <p>Ejemplos informativos. Las opciones finales dependen de disponibilidad.</p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Ciudad A → Ciudad B</h3>
+      <p>Opciones con una o más escalas</p>
+    </div>
+    <div class="card">
+      <h3>Ciudad C → Ciudad D</h3>
+      <p>Alternativas directas y con conexión</p>
+    </div>
+    <div class="card">
+      <h3>Ciudad E → Ciudad F</h3>
+      <p>Rutas según fechas y temporada</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto con asesor</h2>
+  <p>
+    Completa el formulario y te contactaremos con información personalizada
+    sobre opciones de viaje.
+  </p>
+
+  <form method="post" action="#">
+    <input type="text" name="name" placeholder="Nombre completo" required>
+    <input type="email" name="email" placeholder="Correo electrónico" required>
+    <input type="tel" name="phone" placeholder="Teléfono" required>
+    <textarea name="message" placeholder="Origen, destino, fechas aproximadas, pasajeros" required></textarea>
+    <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+  </form>
+</section>
+
+<!-- TÉRMINOS Y CONDICIONES -->
+<section id="terminos">
+  <h2>Términos y Condiciones</h2>
+
+  <div class="legal">
+    <p><strong>Última actualización:</strong> 2026</p>
+
+    <p>
+      Al acceder y utilizar el sitio web <strong>vuelahoy.online</strong>, el usuario
+      acepta los presentes Términos y Condiciones.
+    </p>
+
+    <p>
+      VuelaHoy es un servicio informativo y de asistencia en viajes.
+      El sitio tiene como finalidad brindar información general y facilitar
+      el contacto con asesores humanos.
+    </p>
+
+    <p>
+      VuelaHoy no procesa pagos, no realiza reservas en línea,
+      no vende boletos y no es aerolínea.
+    </p>
+
+    <p>
+      La información mostrada en el sitio es orientativa y puede variar
+      según disponibilidad, fechas, temporada y condiciones del proveedor final.
+    </p>
+
+    <p>
+      El uso del formulario de contacto no implica compra, reserva
+      ni compromiso contractual.
+    </p>
+
+    <p>
+      VuelaHoy no se responsabiliza por cambios, cancelaciones o decisiones
+      tomadas por terceros relacionados con servicios de viaje.
+    </p>
+
+    <p>
+      VuelaHoy se reserva el derecho de modificar estos términos en cualquier momento.
+    </p>
+
+    <p>
+      Para consultas legales puede escribir a:
+      <strong>contacto@vuelahoy.online</strong>
+    </p>
+  </div>
+</section>
+
 <footer>
-  <a onclick="document.getElementById('tc').style.display='block'">
-    Aviso legal y términos
-  </a>
-  <p style="margin-top:12px">
-    © 2026 Información de Vuelos — Sitio informativo
+  <p><strong>VuelaHoy</strong></p>
+  <p>Servicio informativo de viajes</p>
+  <p>📧 contacto@vuelahoy.online</p>
+  <p>📞 +1 (000) 000-0000</p>
+
+  <p style="margin-top:1rem">
+    © 2026 vuelahoy.online — Todos los derechos reservados.
   </p>
 </footer>
-
-<!-- TÉRMINOS -->
-<div id="tc" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);padding:20px">
-  <div style="background:#fff;max-width:820px;margin:40px auto;padding:28px;border-radius:18px">
-    <h3>Aviso Legal</h3>
-
-    <p><strong>Sitio de carácter informativo.</strong></p>
-
-    <p>
-      Este portal no ofrece servicios comerciales, financieros ni de intermediación.
-    </p>
-
-    <p>
-      No se realizan reservas, pagos, cotizaciones ni solicitudes de ningún tipo.
-    </p>
-
-    <p>
-      No representamos aerolíneas, agencias de viaje ni plataformas externas.
-    </p>
-
-    <p>
-      El contenido tiene fines exclusivamente informativos y editoriales.
-    </p>
-
-    <button class="btn" style="margin-top:14px" onclick="document.getElementById('tc').style.display='none'">
-      Cerrar
-    </button>
-  </div>
-</div>
 
 </body>
 </html>
