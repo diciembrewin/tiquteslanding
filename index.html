@@ -1,179 +1,255 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>VuelaHoy | Información y Asistencia en Viajes</title>
+  <title>Volar360Colombia | Asistencia en Viajes</title>
 
-  <meta name="description" content="VuelaHoy brinda información y asistencia para vuelos y opciones de viaje. Contacta con asesores humanos para recibir orientación personalizada.">
+  <meta name="description" content="Volar360Colombia brinda información y asistencia personalizada para vuelos y viajes. Un asesor humano te contactará.">
   <meta name="robots" content="index, follow">
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <!-- Fuentes más llamativas -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Poppins',sans-serif;background:#070b18;color:#fff;line-height:1.6}
-    header{position:fixed;top:0;width:100%;background:rgba(0,0,0,.85);padding:1rem;text-align:center;z-index:100}
-    section{padding:5rem 1.5rem;text-align:center}
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(180deg,#0a1a3a,#020617);
+      color:#ffffff;
+      line-height:1.6;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      background:rgba(2,6,23,.95);
+      padding:1rem;
+      text-align:center;
+      z-index:100;
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+
+    header h1{
+      font-family:'Bebas Neue',sans-serif;
+      font-size:1.8rem;
+      letter-spacing:2px;
+      color:#00f2ff;
+    }
+
+    section{
+      padding:6rem 1.5rem;
+      text-align:center;
+    }
+
     .hero{
-      min-height:100vh;display:flex;align-items:center;justify-content:center;
-      background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.85)),
-      url('https://images.unsplash.com/photo-1503220317375-aaad61436b1b')
-      center/cover no-repeat;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:
+        linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.85)),
+        url('https://images.unsplash.com/photo-1504198453319-5ce911bafcde')
+        center/cover no-repeat;
     }
-    h1{font-size:1.2rem;font-weight:800}
-    h2{font-size:2.1rem;margin-bottom:1rem}
-    h3{margin-bottom:.6rem}
-    p{max-width:900px;margin:0 auto 1.2rem;color:#e6e6e6}
-    .btn{display:inline-block;padding:.85rem 1.2rem;border-radius:999px;font-weight:700;margin:.3rem}
-    .btn-primary{background:#49f2ff;color:#000}
-    .btn-outline{border:2px solid #fff;color:#fff}
-    .cards{max-width:1000px;margin:auto;display:grid;gap:1rem}
-    .card{
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.15);
-      border-radius:1rem;
-      padding:1.5rem;
+
+    h2{
+      font-size:2.4rem;
+      margin-bottom:1rem;
+      color:#00f2ff;
     }
-    form{max-width:600px;margin:auto;display:grid;gap:.8rem;text-align:left}
-    input,textarea{
-      padding:.8rem;border-radius:.6rem;border:1px solid rgba(255,255,255,.2);
-      background:rgba(255,255,255,.08);color:#fff
+
+    h3{
+      color:#ffcc00;
+      margin-bottom:.5rem;
     }
-    footer{
-      background:#000;padding:2rem 1.5rem;color:#aaa;
-      font-size:.85rem;text-align:center
+
+    p{
+      max-width:900px;
+      margin:0 auto 1.2rem;
+      color:#e6e6e6;
     }
-    footer a{color:#aaa}
-    footer a:hover{color:#fff}
-    .legal{
+
+    .btn{
+      display:inline-block;
+      padding:1rem 1.6rem;
+      border-radius:2rem;
+      font-weight:700;
+      margin:.4rem;
+      text-decoration:none;
+      transition:.3s ease;
+    }
+
+    .btn-main{
+      background:linear-gradient(90deg,#00f2ff,#00ffa6);
+      color:#001018;
+    }
+
+    .btn-main:hover{
+      transform:scale(1.05);
+    }
+
+    .btn-alt{
+      border:2px solid #00f2ff;
+      color:#00f2ff;
+    }
+
+    .grid{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      gap:1.4rem;
+    }
+
+    .box{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.2);
+      border-radius:1.4rem;
+      padding:1.8rem;
+      backdrop-filter:blur(6px);
+    }
+
+    form{
+      max-width:650px;
+      margin:auto;
+      display:grid;
+      gap:1rem;
       text-align:left;
+    }
+
+    input, textarea{
+      padding:.9rem;
+      border-radius:.7rem;
+      border:1px solid rgba(255,255,255,.3);
+      background:rgba(255,255,255,.12);
+      color:#fff;
+      font-family:inherit;
+    }
+
+    textarea{min-height:130px}
+
+    footer{
+      background:#020617;
+      padding:2.5rem 1.5rem;
+      color:#aaa;
+      font-size:.9rem;
+      text-align:center;
+    }
+
+    .legal{
       max-width:1000px;
       margin:0 auto;
-      font-size:.9rem;
+      text-align:left;
+      font-size:.95rem;
       color:#ddd;
     }
+
     .legal p{margin-bottom:1rem}
+
     @media(min-width:768px){
-      .cards{grid-template-columns:repeat(3,1fr)}
+      .grid{grid-template-columns:repeat(3,1fr)}
     }
   </style>
- 
 </head>
 
 <body>
 
 <header>
-  <h1>✈️ VuelaHoy</h1>
+  <h1>✈️ Volar360Colombia</h1>
 </header>
 
 <section class="hero">
   <div>
-    <h2>Información y asistencia para viajes</h2>
+    <h2>Tu viaje comienza desde aquí</h2>
     <p>
-      VuelaHoy brinda orientación sobre vuelos y opciones de viaje.
-      Un asesor humano te contactará para ayudarte según tus fechas y destino.
+      En Volar360Colombia brindamos información y orientación
+      sobre vuelos, rutas y alternativas disponibles.
+      Un asesor humano se comunicará contigo.
     </p>
-    <a href="#contacto" class="btn btn-primary">Solicitar información</a>
-    <a href="#terminos" class="btn btn-outline">Términos y condiciones</a>
+    <a href="#asesor" class="btn btn-main">Hablar con un asesor</a>
+    <a href="#condiciones" class="btn btn-alt">Términos de uso</a>
   </div>
 </section>
 
-<section id="opciones">
-  <h2>Rutas consultadas frecuentemente</h2>
-  <p>Ejemplos informativos. Las opciones finales dependen de disponibilidad.</p>
+<section>
+  <h2>Consultas más frecuentes</h2>
+  <p>Algunas de las rutas más solicitadas por nuestros usuarios.</p>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Ciudad A → Ciudad B</h3>
-      <p>Opciones con una o más escalas</p>
+  <div class="grid">
+    <div class="box">
+      <h3>Nacional</h3>
+      <p>Vuelos dentro de Colombia según fechas y disponibilidad.</p>
     </div>
-    <div class="card">
-      <h3>Ciudad C → Ciudad D</h3>
-      <p>Alternativas directas y con conexión</p>
+    <div class="box">
+      <h3>Internacional</h3>
+      <p>Opciones hacia América y otros destinos.</p>
     </div>
-    <div class="card">
-      <h3>Ciudad E → Ciudad F</h3>
-      <p>Rutas según fechas y temporada</p>
+    <div class="box">
+      <h3>Conexiones</h3>
+      <p>Rutas con escalas y combinaciones posibles.</p>
     </div>
   </div>
 </section>
 
-<section id="contacto">
-  <h2>Contacto con asesor</h2>
+<section id="asesor">
+  <h2>Contacto con un asesor</h2>
   <p>
-    Completa el formulario y te contactaremos con información personalizada
-    sobre opciones de viaje.
+    Completa el formulario y un asesor te brindará información
+    acorde a tu solicitud.
   </p>
 
   <form method="post" action="#">
-    <input type="text" name="name" placeholder="Nombre completo" required>
-    <input type="email" name="email" placeholder="Correo electrónico" required>
-    <input type="tel" name="phone" placeholder="Teléfono" required>
-    <textarea name="message" placeholder="Origen, destino, fechas aproximadas, pasajeros" required></textarea>
-    <button type="submit" class="btn btn-primary">Enviar solicitud</button>
+    <input type="text" name="nombre" placeholder="Nombre completo" required>
+    <input type="email" name="correo" placeholder="Correo electrónico" required>
+    <input type="tel" name="telefono" placeholder="Teléfono de contacto" required>
+    <textarea name="consulta" placeholder="Origen, destino, fechas aproximadas y pasajeros" required></textarea>
+    <button type="submit" class="btn btn-main">Enviar solicitud</button>
   </form>
 </section>
 
-<!-- TÉRMINOS Y CONDICIONES -->
-<section id="terminos">
+<section id="condiciones">
   <h2>Términos y Condiciones</h2>
 
   <div class="legal">
     <p><strong>Última actualización:</strong> 2026</p>
 
     <p>
-      Al acceder y utilizar el sitio web <strong>vuelahoy.online</strong>, el usuario
-      acepta los presentes Términos y Condiciones.
+      <strong>Volar360Colombia</strong> ofrece únicamente
+      información y asistencia orientativa sobre viajes.
     </p>
 
     <p>
-      VuelaHoy es un servicio informativo y de asistencia en viajes.
-      El sitio tiene como finalidad brindar información general y facilitar
-      el contacto con asesores humanos.
+      No se realizan pagos, reservas ni venta directa
+      de boletos aéreos.
     </p>
 
     <p>
-      VuelaHoy no procesa pagos, no realiza reservas en línea,
-      no vende boletos y no es aerolínea.
+      La información puede variar según proveedor,
+      disponibilidad y condiciones externas.
     </p>
 
     <p>
-      La información mostrada en el sitio es orientativa y puede variar
-      según disponibilidad, fechas, temporada y condiciones del proveedor final.
-    </p>
-
-    <p>
-      El uso del formulario de contacto no implica compra, reserva
+      El envío del formulario no representa una compra
       ni compromiso contractual.
     </p>
 
     <p>
-      VuelaHoy no se responsabiliza por cambios, cancelaciones o decisiones
-      tomadas por terceros relacionados con servicios de viaje.
-    </p>
-
-    <p>
-      VuelaHoy se reserva el derecho de modificar estos términos en cualquier momento.
-    </p>
-
-    <p>
-      Para consultas legales puede escribir a:
-      <strong>contacto@vuelahoy.online</strong>
+      Contacto:
+      <strong>contacto@volar360colombia.vercel.app</strong>
     </p>
   </div>
 </section>
 
 <footer>
-  <p><strong>VuelaHoy</strong></p>
-  <p>Servicio informativo de viajes</p>
-  <p>📧 contacto@vuelahoy.online</p>
-  <p>📞 +1 (000) 000-0000</p>
+  <p><strong>Volar360Colombia</strong></p>
+  <p>Servicio informativo y asistencia en viajes</p>
+  <p>📧 contacto@volar360colombia.vercel.app</p>
 
   <p style="margin-top:1rem">
-    © 2026 vuelahoy.online — Todos los derechos reservados.
+    © 2026 Volar360Colombia — Todos los derechos reservados.
   </p>
 </footer>
 
